@@ -33,32 +33,37 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     </head>
     <body>
-         <!-- Navigation bar -->
+        <!-- Navigation bar -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img class="d-inline-block img-logo" src="./images/logo/pet-shop-icon.svg" alt="Catty Pet Shop logo" title="Catty Pet Shop, your pet wellnes is our priority.">
                     </a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse nav-main" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 justify-content-end">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">About</a>
+                                <a class="nav-link active" aria-current="page" href="./about-us.html">About</a>
+                            </li>
+                            <li class="nav-item-dropdown">
+                                <a class="nav-link dropdown-toggle" aria-current="page" href="./products.html" id="navbarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                    <li><a href="#" class="dropdown-item">Product1</a></li>
+                                    <li><a href="#" class="dropdown-item">Product2</a></li>
+                                    <li><a href="#" class="dropdown-item">Product3</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Products</a>
+                                <a class="nav-link" aria-current="page" href="./services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Contact</a>
+                                <a class="nav-link" aria-current="page" href="#footer">Contact</a>
                             </li>
                         </ul>
                         <div class="d-flex flex-wrap rounded">
