@@ -23,8 +23,9 @@ header {
 
 .nav-link:hover {
     color: #F6ECE1;
-    background-color: #ABA937;
+    background-color: #E88725;
     border-radius: 5px;
+    transition: tranform .3s ease;
 }
 
 .navbar {
@@ -46,16 +47,25 @@ header {
 }
 
 .nav-item {
-    display: flex;
     align-items: center;
     margin: 1rem;
     font-family: 'Bree Serif', sans-serif;
 }
 
-.btn {
+.btn-master {
     font-family: 'Palanquin Dark', serif;
     font-size: 16px;
-    border: 0;
+    font-weight: 400;
+    border: 1px solid #ABA937;
     color: #F6ECE1;
     background-color: #E88725;
+}
+
+.btn-master:hover {
+    background-color: #DA740E;
+}
+
+.hero-video-fluid {
+    position: absolute;
+    width: auto;
 }
