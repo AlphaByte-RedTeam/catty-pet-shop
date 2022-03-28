@@ -65,6 +65,7 @@ video {
 .hero-title {
     position: absolute;
     font-size: 5rem;
+    color: #120703;
     font-family: 'Palanquin Dark', serif;
     background-color: transparent;
     text-align: left;
