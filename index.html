@@ -36,64 +36,108 @@
     <body>
         <!-- Navigation bar -->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/">
-                        <img class="d-inline-block img-logo" src="./images/logo/pet-shop-icon.svg" alt="Catty Pet Shop logo" title="Catty Pet Shop, your pet wellnes is our priority.">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./about-us.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./products.html">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./services.html">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#footer">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex flex-wrap rounded">
-                            <a href="#" class="btn btn-master">
-                                Register
-                            </a>
+            <section class="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">
+                            <img class="d-inline-block img-logo" src="./images/logo/pet-shop-icon.svg" alt="Catty Pet Shop logo" title="Catty Pet Shop, your pet wellnes is our priority.">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./about-us.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./products.html">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#footer">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex flex-wrap rounded">
+                                <a href="#" class="btn btn-master">
+                                    Register
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </section>
         </header>
         <!-- END Navigation Bar -->
 
         <!-- Hero Section -->
         <main>
-            <div class="hero-container">
-                <div class="container-fluid bg-secondary bg-gradient">
+            <section class="banner">
+                <div class="position-relative has-bg-img">
+                    <h1 class="hero-title text-wrap z-index-1 position-absolute bg-transparent">
+                        We look after your pets<br>
+                        with our best staffs
+                    </h1>
+                    <h3 class="hero-description z-index-1 position-absolute bg-transparent">
+                        Your pet stays in a sitter's home or yours, <br>
+                        whether you're traveling or just out for the day.
+                    </h3>
                     <video autoplay muted loop>
                         <source src="./videos/hero-video.mp4" type="video/mp4">
                         Sorry, your browser does not support video playback.
                         Please upgrade your browser to the latest version immediately.
                         Thank you
                     </video>
-                    <div class="hero-overlay"></div>
-                    <div class="hero-heading">
-                        <h1 class="hero-title">We can feel your pets</h1>
-                    </div>
-                    <div class="hero-info">
-                        <p class="hero-text">
-                            Your pet stays in a sitter's home or yours, whether you're traveling or just out for the day.
-                        </p>
-                    </div>
                 </div>
-            </div>
+            </section>
+            <!-- END Hero Section -->
+
+            <section class="value">
+                <!-- <div class="product-container">
+                    <div class="container-fluid">
+                        <div class="value">
+                            <div class="value-heading">
+                                <h2 class="value-title">
+                                    We look after your pets with our best staffs
+                                </h2>
+                            </div>
+                            <div class="value-top">
+                                <div class="value-top-left">
+                                    <div class="value-top-left-img">
+                                        <i class="fa-solid fa-hands-holding-heart"></i>
+                                    </div>
+                                    <div class="value-top-left-desc">
+                                        <h3 class="value-top-left-title">
+                                            Pet Sitting
+                                        </h3>
+                                        <p class="value-top-left-desc">
+                                            We provide pet sitting services for pets.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="value-top-right">
+                                    <div class="value-top-right-img">
+                                        <img src="./images/products/product-2.jpg" alt="Product 2" title="Product 2">
+                                    </div>
+                                    <div class="value-top-right-desc">
+                                        <h3 class="value-top-right-title">
+                                            Pet Boarding
+                                        </h3>
+                                        <p class="value-top-right-desc">
+                                            We provide pet boarding services for pets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
         </main>
     </body>
 </html>
