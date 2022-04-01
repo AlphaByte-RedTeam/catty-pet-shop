@@ -119,3 +119,9 @@ p.h1 {
 lord-icon {
     background-color: transparent !important;
 }
+
+.gallery-heading {
+    font-family: 'Bree Serif', serif;
+    font-size: 3vw;
+    color: #E88725;
+}
