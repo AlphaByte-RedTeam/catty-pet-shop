@@ -64,7 +64,7 @@ header {
 }
 
 .hero-description {
-    top: 32vw;
+    top: 35vw;
     left: 10vw;
     font-size: 2vw;
     color: #F6ECE1;
@@ -79,8 +79,33 @@ video {
 
 p.h1 {
     color: #E88725 !important;
+    margin-bottom: 10vw !important;
 }
 
-.mt-5 {
+.value-section {
     margin-top: 5vw !important;
+}
+
+.typing-effect {
+    height: 5.5ch;
+    width: 20ch;
+    animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+  
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+      
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+lottie-player {
+    margin: 0 auto;
 }
