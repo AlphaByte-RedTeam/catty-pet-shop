@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Palanquin+Dark:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Palanquin+Dark:wght@400;600&family=Poppins:wght@300;400&family=Rubik:wght@400;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -27,7 +27,7 @@ header {
 }
 
 .navbar-nav {
-    font-family: 'Bree Serif', sans-serif;
+    font-family: 'Bree Serif', serif;
 }
 
 .nav-link:hover {
@@ -41,7 +41,7 @@ header {
 }
 
 .btn-master {
-    font-family: 'Palanquin Dark', serif;
+    font-family: 'Palanquin Dark', sans-serif;
     font-size: 16px;
     font-weight: 400;
     border: 1px solid #ABA937;
@@ -58,7 +58,7 @@ header {
     top: 20vw;
     font-size: 4vw;
     left: 10vw;
-    font-family: 'Palanquin Dark', serif;
+    font-family: 'Palanquin Dark', sans-serif;
     color: #F6ECE1;
     text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.2);
 }
@@ -83,11 +83,20 @@ p.h1 {
 }
 
 .value-section {
+    color: black;
     margin-top: 5vw !important;
 }
 
+.value-title {
+    font-family: 'Rubik', sans-serif;
+}
+
+.value-desc {
+    font-family: 'Poppins', sans-serif;
+}
+
 .typing-effect {
-    height: 5.5ch;
+    height: 5.8ch;
     width: 20ch;
     animation: typing 2s steps(20), blink .5s step-end infinite alternate;
     overflow: hidden;
@@ -104,8 +113,4 @@ p.h1 {
     50% {
         border-color: transparent
     }
-}
-
-lottie-player {
-    margin: 0 auto;
 }
