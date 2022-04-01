@@ -76,3 +76,11 @@ video {
     padding-top: 2vh;
     width: 100%;
 }
+
+p.h1 {
+    color: #E88725 !important;
+}
+
+.mt-5 {
+    margin-top: 5vw !important;
+}
