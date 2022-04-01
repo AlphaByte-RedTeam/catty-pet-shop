@@ -1,5 +1,5 @@
 #section-text-1,
-#section-img-2{
+#section-img-2 {
     flex: 1 1 1px;
 }
   
@@ -9,3 +9,12 @@
 #section-text-2 {
     flex: 2 1 1px;
 }
+
+/* #section-text-1 {
+    color: #ABA937;     */
+/* } */
+
+.blackcolor {
+    color: black;
+}
+
