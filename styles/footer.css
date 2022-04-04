@@ -1,0 +1,23 @@
+.footer-text{
+    flex: 1 1 1px;
+}
+
+.footer-form{
+    flex: 2 1 1px;
+}
+
+.footer-map{
+    flex: 1 1 1px;
+}
+
+#form-submit-btn{
+    background-color: #e88725;
+}
+
+#form-submit-btn:hover{
+    color: white;
+}
+
+.separator{
+    color: #e88725;
+}
