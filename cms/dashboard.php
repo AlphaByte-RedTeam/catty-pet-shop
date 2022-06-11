@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CMS Catty Pet Shop | Login</title>
+    <title>CMS Catty Pet Shop | Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./toruskit-free/dist/css/toruskit.bundle.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -39,62 +39,18 @@
 </head>
 
 <body>
-    <?php
-    include "koneksi.php";
-    if (isset($_POST['btnsubmit'])) {
-        $email = $_POST['email'];
-        $password = md5(trim($_POST['password']));
-        $sSQL = "SELECT * FROM tb_member WHERE email='$email' AND member_password='$password' LIMIT 1";
-        $result = mysqli_query($conn, $sSQL);
+    <?php session_start(); ?>
 
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $username = $row['first_name'] . " " . $row['last_name'];
-
-            session_start();
-
-            $_SESSION['username'] = $username;
-            $_SESSION['isLoggedin'] = '1';
-
-            header("location: dashboard.php");
-        }
-    }
-    ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form" action="index.php" method="POST">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus required />
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" id="password" name="password" type="password" value="" required />
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" onClick="myFunction()" />Show Password
-                                    </label>
-                                </div>
-                                <button type="submit" name="btnsubmit" class="btn btn-lg btn-success btn-block">Login</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-        </div>
+        </nav>
     </div>
-    <script>
-        const myFunction = () => {
-            const getPass = document.getElementById('password');
-            getPass.type === 'password' ? getPass.type = 'text' : getPass.type = 'password';
-        }
-    </script>
 </body>
-
-</html>
