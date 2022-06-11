@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 02:57 PM
+-- Generation Time: Jun 11, 2022 at 06:19 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -44,7 +44,7 @@ CREATE TABLE `tb_aboutus` (
 CREATE TABLE `tb_coreval` (
   `id_coreval` int(4) NOT NULL,
   `title_coreval` varchar(80) DEFAULT NULL,
-  `desc_coreval` longtext DEFAULT NULL,
+  `desc_coreval` varchar(80) DEFAULT NULL,
   `src_coreval` longtext DEFAULT NULL,
   `flag_active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=active || 0=active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
