@@ -40,7 +40,7 @@
 
 <body>
     <?php
-    include "koneksi.php";
+    include "./helper/koneksi.php";
     if (isset($_POST['btnsubmit'])) {
         $email = $_POST['email'];
         $password = md5(trim($_POST['password']));
