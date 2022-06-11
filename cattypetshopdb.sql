@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2022 at 06:19 AM
+-- Generation Time: Jun 11, 2022 at 08:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -73,7 +73,8 @@ CREATE TABLE `tb_member` (
   `first_name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
   `email` varchar(80) NOT NULL,
-  `member_password` varchar(80) DEFAULT NULL
+  `member_password` varchar(80) DEFAULT NULL,
+  `priv_type` tinyint(1) NOT NULL DEFAULT 0 COMMENT '1=Admin || 0=user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
