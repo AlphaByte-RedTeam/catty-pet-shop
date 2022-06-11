@@ -39,7 +39,7 @@
 
 <body>
     <?php
-    include "connection.php";
+    include "koneksi.php";
     if (isset($_POST['btnsubmit'])) {
         $email = $_POST['email'];
         $password = md5(trim($_POST['password']));
