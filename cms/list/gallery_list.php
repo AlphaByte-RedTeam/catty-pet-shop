@@ -58,6 +58,80 @@
     require_once "../helper/koneksi.php";
     ?>
 
+    <div id="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../dashboard.php">CATTY PETSHOP DASHBOARD</a>
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    Toggle menu
+                    <i class="fa-solid fa-right-long"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h4 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">CMS Dashboard Menu</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="sidebar-collapse">
+                            <ul class="vstack gap-3 nav" id="side-menu">
+                                <li>
+                                    <a href="dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
+                                </li>
+                                <li>
+                                    <a href="video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
+                                </li>
+                                <li>
+                                    <a href="coreval_list.php" target="frameContent"><i class="fa-solid fa-bullseye fa-2xl"></i>&nbsp;&nbsp;Core Value List</a>
+                                </li>
+                                <li>
+                                    <a href="gallery_list.php" target="frameContent"><i class="fa-solid fa-image fa-2xl"></i>&nbsp;&nbsp;Gallery List</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-address-card fa-2xl"></i>&nbsp;&nbsp;About Us List</a>
+                                </li>
+                                <li>
+                                    <a href="products_list.php" target="frameContent"><i class="fa-solid fa-bag-shopping fa-2xl"></i>&nbsp;&nbsp;Products List</a>
+                                </li>
+                                <li>
+                                    <a href="services_list.php" target="frameContent"><i class="fa-solid fa-bell-concierge fa-2xl"></i>&nbsp;&nbsp;Services List</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle bg-primary" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                        Hello, <?= $_SESSION['username']; ?>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#" class="text-black">User Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-black">Change Password</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="./helper/logout.php" class="text-black">Logout</a>
+                        </li>
+                    </ul> <!-- /.dropdown-user -->
+                </li> <!-- /.dropdown -->
+            </ul> <!-- /.navbar-top-links -->
+        </nav>
+    </div>
+
     <div class="container mt-3">
         <h2>GALLERY LIST</h2>
         <a href="../form_tambah_gallery.php"><button type="button" class="btn btn-primary">Tambah </button></a>
