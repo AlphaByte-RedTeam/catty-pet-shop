@@ -39,7 +39,11 @@
 </head>
 
 <body>
-    <?php session_start(); ?>
+    <?php session_start();
+    if (!isset($_SESSION['username'])) {
+    header("location: index.php");
+}
+    ?>
 
     <div id="wrapper">
         <nav class="navbar navbar-dark bg-dark navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
@@ -67,25 +71,25 @@
                                     <a href="dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="./list/aboutus_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
+                                    <a href="list/user_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
                                 </li>
                                 <li>
-                                    <a href="./list/video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
+                                    <a href="video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
                                 </li>
                                 <li>
-                                    <a href="./list/coreval_list.php" target="frameContent"><i class="fa-solid fa-bullseye fa-2xl"></i>&nbsp;&nbsp;Core Value List</a>
+                                    <a href="coreval_list.php" target="frameContent"><i class="fa-solid fa-bullseye fa-2xl"></i>&nbsp;&nbsp;Core Value List</a>
                                 </li>
                                 <li>
-                                    <a href="./list/gallery_list.php" target="frameContent"><i class="fa-solid fa-image fa-2xl"></i>&nbsp;&nbsp;Gallery List</a>
+                                    <a href="gallery_list.php" target="frameContent"><i class="fa-solid fa-image fa-2xl"></i>&nbsp;&nbsp;Gallery List</a>
                                 </li>
                                 <li>
-                                    <a href="./list/aboutus_list.php" target="frameContent"><i class="fa-solid fa-address-card fa-2xl"></i>&nbsp;&nbsp;About Us List</a>
+                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-address-card fa-2xl"></i>&nbsp;&nbsp;About Us List</a>
                                 </li>
                                 <li>
-                                    <a href="./list/products_list.php" target="frameContent"><i class="fa-solid fa-bag-shopping fa-2xl"></i>&nbsp;&nbsp;Products List</a>
+                                    <a href="products_list.php" target="frameContent"><i class="fa-solid fa-bag-shopping fa-2xl"></i>&nbsp;&nbsp;Products List</a>
                                 </li>
                                 <li>
-                                    <a href="./list/services_list.php" target="frameContent"><i class="fa-solid fa-bell-concierge fa-2xl"></i>&nbsp;&nbsp;Services List</a>
+                                    <a href="services_list.php" target="frameContent"><i class="fa-solid fa-bell-concierge fa-2xl"></i>&nbsp;&nbsp;Services List</a>
                                 </li>
                             </ul>
                         </div>
@@ -96,11 +100,11 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="btn btn-primary dropdown-toggle bg-primary" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Hello, <?= $_SESSION['username']; ?>
+                        Hello, <?php echo $_SESSION['username']; ?>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <a href="#" class="text-black">User Profile</a>
+                            <a href="form_ubah_member.php" class="text-black">User Profile</a>
                         </li>
                         <li>
                             <a href="#" class="text-black">Change Password</a>

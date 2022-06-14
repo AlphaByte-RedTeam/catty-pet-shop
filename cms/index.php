@@ -41,22 +41,26 @@
 <body>
     <?php
     include "./helper/koneksi.php";
+    session_start();
+    if (isset($_SESSION['username'])) {
+    header("Location: dashboard.php");
+    }
     if (isset($_POST['btnsubmit'])) {
         $email = $_POST['email'];
-        $password = md5(trim($_POST['password']));
-        $sSQL = "SELECT * FROM tb_member WHERE email='$email' AND member_password='$password' LIMIT 1";
+        $password = $_POST['password'];
+        $sSQL = "SELECT * FROM tb_member WHERE email='$email' AND member_password='$password'";
         $result = mysqli_query($conn, $sSQL);
 
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $username = $row['first_name'] . " " . $row['last_name'];
 
-            session_start();
-
-            $_SESSION['username'] = $username;
+            $_SESSION['username'] = $username ;
             $_SESSION['isLoggedin'] = '1';
 
             header("location: dashboard.php");
+        }else {
+        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
         }
     }
     ?>
