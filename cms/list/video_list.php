@@ -34,8 +34,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <!-- footer css -->
-    <link rel="stylesheet" href="css/sb-admin.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sb-admin.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <script>
         function konfirmasi_hapus() {
@@ -79,10 +79,10 @@
                         <div class="sidebar-collapse">
                             <ul class="vstack gap-3 nav" id="side-menu">
                                 <li>
-                                    <a href="dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
+                                    <a href="../dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
+                                    <a href="user_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
                                 </li>
                                 <li>
                                     <a href="video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>

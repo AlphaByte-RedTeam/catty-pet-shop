@@ -71,7 +71,7 @@
                                     <a href="dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="./list/aboutus_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
+                                    <a href="./list/user_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
                                 </li>
                                 <li>
                                     <a href="./list/video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
