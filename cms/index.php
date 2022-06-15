@@ -43,7 +43,7 @@
     include "./helper/koneksi.php";
     if (isset($_POST['btnsubmit'])) {
         $email = $_POST['email'];
-        $password = md5(trim($_POST['password']));
+        $password = $_POST['password'];
         $sSQL = "SELECT * FROM tb_member WHERE email='$email' AND member_password='$password' LIMIT 1";
         $result = mysqli_query($conn, $sSQL);
 
@@ -57,6 +57,8 @@
             $_SESSION['isLoggedin'] = '1';
 
             header("location: dashboard.php");
+        } else {
+            echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
         }
     }
     ?>

@@ -55,9 +55,8 @@
   <?php
   session_start();
 
-  // implement later
-  // if (empty($_SESSION['isLoggedin']))
-  // 	header("location: helper/logout.php");
+  if (empty($_SESSION['isLoggedin']))
+  	header("location: helper/logout.php");
 
   if (empty($_GET['id']))
     header("location: list/user_list.php");

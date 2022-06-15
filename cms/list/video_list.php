@@ -51,9 +51,8 @@
     <?php
     session_start();
 
-    // implement later
-    // if (empty($_SESSION['isLoggedin']))
-    // 	header("location: ../helper/logout.php");
+    if (empty($_SESSION['isLoggedin']))
+    	header("location: ../helper/logout.php");
 
     require_once "../helper/koneksi.php";
     ?>
@@ -123,7 +122,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="./helper/logout.php" class="text-black">Logout</a>
+                            <a href="../helper/logout.php" class="text-black">Logout</a>
                         </li>
                     </ul> <!-- /.dropdown-user -->
                 </li> <!-- /.dropdown -->

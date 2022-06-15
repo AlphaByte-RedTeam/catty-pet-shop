@@ -54,9 +54,8 @@
   <?php
   session_start();
 
-  // implement later
-  // if (empty($_SESSION['isLoggedin']))
-  // 	header("location: helper/logout.php");
+  if (empty($_SESSION['isLoggedin']))
+  	header("location: helper/logout.php");
 
   require_once "helper/koneksi.php";
   ?>

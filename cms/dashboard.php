@@ -39,7 +39,11 @@
 </head>
 
 <body>
-    <?php session_start(); ?>
+    <?php session_start();
+    if (!isset($_SESSION['username'])) {
+        header("location: index.php");
+    }
+    ?>
 
     <div id="wrapper">
         <nav class="navbar navbar-dark bg-dark navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
@@ -96,7 +100,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="btn btn-primary dropdown-toggle bg-primary" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-                        Hello, <?= $_SESSION['username']; ?>
+                        Hello, <?php echo $_SESSION['username']; ?>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>

@@ -54,9 +54,8 @@
   <?php
   session_start();
 
-  // implement later
-  // if (empty($_SESSION['isLoggedin']))
-  // 	header("location: helper/logout.php");
+  if (empty($_SESSION['isLoggedin']))
+  	header("location: helper/logout.php");
 
   require_once "helper/koneksi.php";
   ?>
@@ -82,7 +81,7 @@
 
       <button type="submit" class="btn btn-primary">Submit</button>
 
-      <a href="list/service_list.php"><button type="button" class="btn btn-info">Cancel</button></a>
+      <a href="list/services_list.php"><button type="button" class="btn btn-info">Cancel</button></a>
     </form>
   </div>
 
