@@ -74,22 +74,22 @@
                                     <a href="list/user_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
                                 </li>
                                 <li>
-                                    <a href="video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
+                                    <a href="list/video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
                                 </li>
                                 <li>
-                                    <a href="coreval_list.php" target="frameContent"><i class="fa-solid fa-bullseye fa-2xl"></i>&nbsp;&nbsp;Core Value List</a>
+                                    <a href="list/coreval_list.php" target="frameContent"><i class="fa-solid fa-bullseye fa-2xl"></i>&nbsp;&nbsp;Core Value List</a>
                                 </li>
                                 <li>
-                                    <a href="gallery_list.php" target="frameContent"><i class="fa-solid fa-image fa-2xl"></i>&nbsp;&nbsp;Gallery List</a>
+                                    <a href="list/gallery_list.php" target="frameContent"><i class="fa-solid fa-image fa-2xl"></i>&nbsp;&nbsp;Gallery List</a>
                                 </li>
                                 <li>
-                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-address-card fa-2xl"></i>&nbsp;&nbsp;About Us List</a>
+                                    <a href="list/aboutus_list.php" target="frameContent"><i class="fa-solid fa-address-card fa-2xl"></i>&nbsp;&nbsp;About Us List</a>
                                 </li>
                                 <li>
-                                    <a href="products_list.php" target="frameContent"><i class="fa-solid fa-bag-shopping fa-2xl"></i>&nbsp;&nbsp;Products List</a>
+                                    <a href="list/products_list.php" target="frameContent"><i class="fa-solid fa-bag-shopping fa-2xl"></i>&nbsp;&nbsp;Products List</a>
                                 </li>
                                 <li>
-                                    <a href="services_list.php" target="frameContent"><i class="fa-solid fa-bell-concierge fa-2xl"></i>&nbsp;&nbsp;Services List</a>
+                                    <a href="list/services_list.php" target="frameContent"><i class="fa-solid fa-bell-concierge fa-2xl"></i>&nbsp;&nbsp;Services List</a>
                                 </li>
                             </ul>
                         </div>
