@@ -34,8 +34,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <!-- footer css -->
-    <link rel="stylesheet" href="css/sb-admin.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sb-admin.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <script>
         function konfirmasi_hapus() {
@@ -51,9 +51,8 @@
     <?php
     session_start();
 
-    // implement later
-    // if (empty($_SESSION['isLoggedin']))
-    // 	header("location: ../helper/logout.php");
+    if (empty($_SESSION['isLoggedin']))
+    	header("location: ../helper/logout.php");
 
     require_once "../helper/koneksi.php";
     ?>
@@ -81,10 +80,10 @@
                         <div class="sidebar-collapse">
                             <ul class="vstack gap-3 nav" id="side-menu">
                                 <li>
-                                    <a href="dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
+                                    <a href="../dashboard.php"><i class="fa-solid fa-table-columns fa-2xl"></i>&nbsp;&nbsp;Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="aboutus_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
+                                    <a href="user_list.php" target="frameContent"><i class="fa-solid fa-user fa-2xl"></i>&nbsp;&nbsp;User Member</a>
                                 </li>
                                 <li>
                                     <a href="video_list.php" target="frameContent"><i class="fa-solid fa-video fa-2xl"></i>&nbsp;&nbsp;Video List</a>
@@ -124,7 +123,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="./helper/logout.php" class="text-black">Logout</a>
+                            <a href="../helper/logout.php" class="text-black">Logout</a>
                         </li>
                     </ul> <!-- /.dropdown-user -->
                 </li> <!-- /.dropdown -->

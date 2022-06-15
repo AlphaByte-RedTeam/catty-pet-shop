@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-// later - implement
-// if (empty($_SESSION['isLoggedin'])){
-//    header("location: logout.php");
-//    return;
-// }
+if (empty($_SESSION['isLoggedin'])){
+   header("location: logout.php");
+   return;
+}
 
-// later - also check for isAdmin
-// if (empty($_GET['id']) || empty($_SESSION['isAdmin'])){
-if (empty($_GET['id'])) {
+// also check for isAdmin
+if (empty($_GET['id']) || empty($_SESSION['isAdmin'])){
    header("location: ../list/user_list.php");
    return;
 }

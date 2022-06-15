@@ -55,14 +55,22 @@
   <?php
   session_start();
 
-  // implement later
-  // if (empty($_SESSION['isLoggedin']))
-  // 	header("location: helper/logout.php");
+  if (empty($_SESSION['isLoggedin']))
+    header("location: helper/logout.php");
 
   if (empty($_GET['id']))
     header("location: list/user_list.php");
 
   require_once "helper/koneksi.php";
+  ?>
+
+  <?php if (empty($_SESSION['isAdmin'])) : ?>
+    <div class="container my-3">
+      Anda tidak memiliki credential untuk melihat halaman ini
+    </div>
+  <?php
+    return;
+  endif;
   ?>
 
   <?php
@@ -109,8 +117,8 @@
 
       <!-- don't put value in input to prevent bug in simpan_ubah_member -->
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="isAdmin" name="isAdmin" <?php if ($priv==1): ?> checked <?php endif; ?>>
-        <label for="flexCheckDefault" class="form-check-label" >
+        <input type="checkbox" class="form-check-input" id="isAdmin" name="isAdmin" <?php if ($priv == 1) : ?> checked <?php endif; ?>>
+        <label for="flexCheckDefault" class="form-check-label">
           Make Admin
         </label>
       </div>

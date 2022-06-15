@@ -54,9 +54,8 @@
   <?php
   session_start();
 
-  // implement later
-  // if (empty($_SESSION['isLoggedin']))
-  // 	header("location: helper/logout.php");
+  if (empty($_SESSION['isLoggedin']))
+    header("location: helper/logout.php");
 
   require_once "helper/koneksi.php";
   ?>
@@ -79,7 +78,7 @@
       </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="isActive" name="isActive">
-        <label for="flexCheckDefault" class="form-check-label" >
+        <label for="flexCheckDefault" class="form-check-label">
           Make Active
         </label>
       </div>

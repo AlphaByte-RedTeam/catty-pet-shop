@@ -57,10 +57,16 @@
 
             $_SESSION['username'] = $username ;
             $_SESSION['isLoggedin'] = '1';
+            
+            $priv = $row['priv_type'];
+            
+            if ($priv == 1):
+                $_SESSION['isAdmin'] = '1';
+            endif;
 
             header("location: dashboard.php");
-        }else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+        } else {
+            echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
         }
     }
     ?>

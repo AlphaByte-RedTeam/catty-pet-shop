@@ -1,11 +1,10 @@
 <?php
 session_start();
 
-// later - implement
-// if (empty($_SESSION['isLoggedin'])){
-//    header("location: logout.php");
-//    return;
-// }
+if (empty($_SESSION['isLoggedin'])){
+   header("location: logout.php");
+   return;
+}
 
 require_once "koneksi.php";
 ?>
