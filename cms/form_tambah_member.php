@@ -55,9 +55,18 @@
   session_start();
 
   if (empty($_SESSION['isLoggedin']))
-  	header("location: helper/logout.php");
+    header("location: helper/logout.php");
 
   require_once "helper/koneksi.php";
+  ?>
+
+  <?php if (empty($_SESSION['isAdmin'])) : ?>
+    <div class="container my-3">
+      Anda tidak memiliki credential untuk melihat halaman ini
+    </div>
+  <?php
+    return;
+  endif;
   ?>
 
   <div class="container mt-3">
@@ -82,7 +91,7 @@
       </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="isAdmin" name="isAdmin">
-        <label for="flexCheckDefault" class="form-check-label" >
+        <label for="flexCheckDefault" class="form-check-label">
           Make Admin
         </label>
       </div>

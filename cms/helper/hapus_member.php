@@ -6,9 +6,8 @@ if (empty($_SESSION['isLoggedin'])){
    return;
 }
 
-// later - also check for isAdmin
-// if (empty($_GET['id']) || empty($_SESSION['isAdmin'])){
-if (empty($_GET['id'])) {
+// also check for isAdmin
+if (empty($_GET['id']) || empty($_SESSION['isAdmin'])){
    header("location: ../list/user_list.php");
    return;
 }

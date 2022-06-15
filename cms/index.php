@@ -55,6 +55,12 @@
 
             $_SESSION['username'] = $username;
             $_SESSION['isLoggedin'] = '1';
+            
+            $priv = $row['priv_type'];
+            
+            if ($priv == 1):
+                $_SESSION['isAdmin'] = '1';
+            endif;
 
             header("location: dashboard.php");
         } else {
