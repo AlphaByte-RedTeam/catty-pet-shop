@@ -66,11 +66,11 @@
 
       <div class="mb-3 mt-3">
         <label for="img_gallery">Img:</label>
-        <input type="file" class="form-control" id="img_gallery" placeholder="Enter Img" name="img_gallery" required>
+        <input type="text" class="form-control" id="img_gallery" placeholder="Enter Img" name="img_gallery" required>
       </div>
       <div class="mb-3 mt-3">
         <label for="alt_gallery">Alt:</label>
-        <input type="file" class="form-control" id="alt_gallery" placeholder="Enter Alt" name="alt_gallery" required>
+        <input type="text" class="form-control" id="alt_gallery" placeholder="Enter Alt" name="alt_gallery" required>
       </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="isActive" name="isActive">
