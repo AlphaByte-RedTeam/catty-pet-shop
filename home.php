@@ -53,10 +53,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="./home.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./about-us.html">About</a>
+                                <a class="nav-link" aria-current="page" href="./about-us.php">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="./products.html">Products</a>
@@ -173,24 +173,29 @@
         <section class="container gallery-section">
             <div id="gallery-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <?php
-                        $sSQL = "SELECT * FROM tb_gallery ORDER BY rand()";
-                        $result = mysqli_query($conn, $sSQL);
+                    <?php
+                    $sSQL = "SELECT * FROM tb_gallery ORDER BY rand()";
+                    $result = mysqli_query($conn, $sSQL);
+                    $firstRecord = 0;
 
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-
-                        ?>
-                                <div class="carousel-item-img">
-                                    <img src=<?= $row["src_gallery"] ?> alt="" class="d-block w-100 mx-auto rounded">
+                    if (mysqli_num_rows($result) > 0) :
+                        while ($row = mysqli_fetch_assoc($result)) :
+                            $firstRecord++;
+                    ?>
+                            <?php if ($firstRecord === 1) : ?>
+                                <div class="carousel-item active">
+                            <?php else : ?>
+                                <div class="carousel-item">
+                            <?php endif; ?>
+                                    <img src=<?= $row["img_gallery"] ?> alt="" class="d-block w-100 mx-auto rounded">
                                 </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                    <!-- <div class="carousel-item">
+                            <?php
+                        endwhile;
+                    endif;
+                            ?>
+
+
+                            <!-- <div class="carousel-item">
                         <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Catty raising her hand" class="d-block w-100 mx-auto rounded">
                     </div>
                     <div class="carousel-item">
@@ -217,17 +222,17 @@
                     <div class="carousel-item">
                         <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Cute rabbit" class="d-block w-100 mx-auto rounded">
                     </div> -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <h2 class="row d-flex justify-content-around gallery-heading" id="our-gallery">Our Gallery</h2>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                <h2 class="row d-flex justify-content-around gallery-heading" id="our-gallery">Our Gallery</h2>
-            </div>
         </section>
         <footer id="footer">
             <section class="footer">
