@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
@@ -10,10 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./toruskit-free/dist/css/toruskit.bundle.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/12f0b33110.js" crossorigin="anonymous"></script>
     <meta property="og:title" content="Catty Pet Shop">
     <meta property="og:description" content="Catty Pet Shop is a trusted pet store since 2019 that excel in grooming and training services. We also sell pet products.">
     <meta property="og:image" content="">
     <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <link rel="stylesheet" href="./styles/services.css" type="text/css">
     <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
@@ -53,7 +55,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./home.php">Home</a>
+                                <a class="nav-link" aria-current="page" href="./home.php">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="./about-us.php">About</a>
@@ -62,7 +64,7 @@
                                 <a class="nav-link" aria-current="page" href="./products.php">Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./services.php">Services</a>
+                                <a class="nav-link active" aria-current="page" href="./services.php">Services</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#footer">Contact</a>
@@ -80,160 +82,98 @@
     </header>
     <!-- END Navigation Bar -->
 
-    <!-- Hero Section -->
+    <!-- Main Content -->
     <main>
-        <section class="banner">
-            <div class="position-relative has-bg-img">
-                <h1 class="typing-effect hero-title text-wrap z-index-1 position-absolute bg-transparent">
-                    We look after your pets with our best staffs
-                    <?php
-                    $sSQL = "SELECT * FROM tb_video";
-                    $result = mysqli_query($conn, $sSQL);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        $row = mysqli_fetch_assoc($result);
-                        $file_video = "";
-                    }
-                    mysqli_free_result($result);
-                    ?>
-                </h1>
-                <div class="wrapper">
-                    <h3 class="hero-description z-index-1 position-absolute bg-transparent">
-                        Your pet stays in a sitter's home or yours, <br>
-                        whether you're traveling or just out for the day.
-                    </h3>
+        <section class="text-light mt-5 py-5">
+            <div class="container d-sm-flex align-items-center justify-content-between">
+                <div class="blackcolor" id="section-text-1">
+                    <h2 class="font">Our Services </h2>
+                    <p>As a team of experienced Pet owners and lovers, we really get to know you and your pet.</p>
                 </div>
-                <video autoplay muted loop>
-                    <source src="./videos/hero-video.mp4" type="video/mp4">
-                    Sorry, your browser does not support video playback.
-                    Please upgrade your browser to the latest version immediately.
-                    Thank you
-                </video>
-            </div>
-        </section>
-        <!-- END Hero Section -->
-
-        <!-- Value Section -->
-        <section class="container value-section" id="valueSection">
-            <div class="row">
-                <p class="h1 text-center">
-                    Our Core Value
-                </p>
-            </div>
-            <div class="row">
-                <div class="value-playful d-flex justify-content-start flex-wrap">
-                    <div>
-                        <?php
-                        $sSQL = "SELECT * FROM tb_coreval";
-                        $result = mysqli_query($conn, $sSQL);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                                <lottie-player src=<?= $row["src_coreval"]; ?>background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                    <div class="col-md-3 align-self-center ms-6">
-                        <?php
-                        $sSQL = "SELECT * FROM tb_coreval";
-                        $result = mysqli_query($conn, $sSQL);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                                <h3 class="value-title">
-                                    <?= $row["title_coreval"] ?>
-                                </h3>
-                                <p class="value-desc">
-                                    <?= $row["desc_coreval"] ?>
-                                </p>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
+                <div id="section-img-1">
+                    <img src="./images/services/page1.png" type="image/png">
                 </div>
             </div>
-            <div class="button d-flex justify-content-center">
-                <button type="button" class="btn rounded-pill btn-lg my-5 btn-master">
-                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                    <lord-icon src="https://cdn.lordicon.com/cnyeuzxc.json" trigger="loop" style="width:32px;height:32px">
-                    </lord-icon>
-                    Reserve Now
-                </button>
-            </div>
         </section>
-        <!-- END Value Section -->
 
-        <!-- Gallery carousel section -->
-        <section class="container gallery-section">
-            <div id="gallery-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+        <section class="services">
+            <div class="container">
+                <div class="row p-5">
+
                     <?php
-                    $sSQL = "SELECT * FROM tb_gallery ORDER BY rand()";
+                    $sSQL = "SELECT * FROM tb_service";
                     $result = mysqli_query($conn, $sSQL);
-                    $firstRecord = 0;
 
                     if (mysqli_num_rows($result) > 0) :
                         while ($row = mysqli_fetch_assoc($result)) :
-                            $firstRecord++;
+                            if ($row['flag_active'] != 0) : // Check if active, delete this (and the first endif below) if flag active is not used
+                                $image = $row['img_service'];
+                                $title = $row['title_service'];
                     ?>
-                            <?php if ($firstRecord === 1) : ?>
-                                <div class="carousel-item active">
-                                <?php else : ?>
-                                    <div class="carousel-item">
-                                    <?php endif; ?>
-                                    <img src=<?= $row["img_gallery"] ?> alt="" class="d-block w-100 mx-auto rounded">
+                                <div class="col-md text-center">
+                                    <div class="card my-2">
+                                        <div class="card-body">
+                                            <?php echo '<img src="images/services/' . $image . '" alt="card image 1">' ?>
+                                            <h4 class="card-title">
+                                                <?php echo $title; ?>
+                                            </h4>
+                                        </div>
                                     </div>
-                            <?php
+                                </div>
+                    <?php
+                            endif;
                         endwhile;
                     endif;
-                            ?>
+                    ?>
 
-
-                            <!-- <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Catty raising her hand" class="d-block w-100 mx-auto rounded">
+                    <!-- <div class="col-md text-center">
+                        <div class="card my-2">
+                            <div class="card-body">
+                                <img src="./images/services/images1.png" alt="card image 1">
+                                <h4 class="card-title">
+                                    Grooming
+                                </h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Dog with nature view" class="d-block w-100 mx-auto rounded">
+                    <div class="col-md text-center">
+                        <div class="card my-2">
+                            <div class="card-body">
+                                <img src="./images/services/image2.png" alt="card image 2">
+                                <h4 class="card-title">
+                                    Pet Clinic
+                                </h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1508675801627-066ac4346a61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1165&q=80" alt="Boy hugging a puppy" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1592237163215-c97b487faeb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="A group of gold fish in an aquarium" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Cat raising hand" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Golden retriever biting a doll with cute pose" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Two dogs running" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1482066490729-6f26115b60dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1114&q=80" alt="Cat sleeping" class="d-block w-100 mx-auto rounded">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Cute rabbit" class="d-block w-100 mx-auto rounded">
+                    <div class="col-md text-center">
+                        <div class="card my-2">
+                            <div class="card-body">
+                                <img src="./images/services/image3.png" alt="card image 3">
+                                <h4 class="card-title">
+                                    Pet Sitter
+                                </h4>
+                            </div>
+                        </div>
                     </div> -->
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                                <h2 class="row d-flex justify-content-around gallery-heading" id="our-gallery">Our Gallery</h2>
                 </div>
+            </div>
         </section>
+
+        <section class="text-light mt-5 py-5">
+            <div class="container d-sm-flex align-items-center justify-content-between">
+                <div id="section-img-2">
+                    <img src="./images/services/page2.png" type="image/png">
+                </div>
+                <div class="blackcolor" id="section-text-2">
+                    <h3 class="font">Your furry friend is In Safe Hands</h3>
+                    <p>As a team of experienced Pet owners and lovers, we really get to know you and your pet through
+                        our one-on-one private walks and we can guarantee consistent and personal care that is equal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <footer id="footer">
             <section class="footer">
                 <div class="container-fluid p-5">

@@ -54,16 +54,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="./home.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./about-us.html">About</a>
+                                <a class="nav-link active" aria-current="page" href="./about-us.php">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./products.html">Products</a>
+                                <a class="nav-link" aria-current="page" href="./products.php">Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./services.html">Services</a>
+                                <a class="nav-link" aria-current="page" href="./services.php">Services</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#footer">Contact</a>
