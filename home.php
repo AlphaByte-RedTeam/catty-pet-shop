@@ -86,16 +86,6 @@
             <div class="position-relative has-bg-img">
                 <h1 class="typing-effect hero-title text-wrap z-index-1 position-absolute bg-transparent">
                     We look after your pets with our best staffs
-                    <?php
-                    $sSQL = "SELECT * FROM tb_video";
-                    $result = mysqli_query($conn, $sSQL);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        $row = mysqli_fetch_assoc($result);
-                        $file_video = "";
-                    }
-                    mysqli_free_result($result);
-                    ?>
                 </h1>
                 <div class="wrapper">
                     <h3 class="hero-description z-index-1 position-absolute bg-transparent">
@@ -104,7 +94,17 @@
                     </h3>
                 </div>
                 <video autoplay muted loop>
-                    <source src="./videos/hero-video.mp4" type="video/mp4">
+                    <?php
+                    $sSQL = "SELECT * FROM tb_video";
+                    $result = mysqli_query($conn, $sSQL);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                        $file_video = "cms/video/" . trim($row['file_video']);
+                    }
+                    mysqli_free_result($result);
+                    ?>
+                    <source src="<?= $file_video; ?>" type="video/mp4">
                     Sorry, your browser does not support video playback.
                     Please upgrade your browser to the latest version immediately.
                     Thank you
