@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2022 at 08:36 AM
+-- Generation Time: Jun 16, 2022 at 09:50 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -35,6 +35,13 @@ CREATE TABLE `tb_aboutus` (
   `flag_active` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tb_aboutus`
+--
+
+INSERT INTO `tb_aboutus` (`id_aboutus`, `title_aboutus`, `desc_aboutus`, `img_aboutus`, `flag_active`) VALUES
+(1, 'We are #1', 'Provided top service', 'download.jpg', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +56,17 @@ CREATE TABLE `tb_coreval` (
   `flag_active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=active || 0=active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tb_coreval`
+--
+
+INSERT INTO `tb_coreval` (`id_coreval`, `title_coreval`, `desc_coreval`, `src_coreval`, `flag_active`) VALUES
+(1, 'Heart', 'Heart Lottie', 'https://assets3.lottiefiles.com/packages/lf20_bojn7fmw.json	      ', 1),
+(2, 'Hello', 'Hello Lottie', 'https://assets3.lottiefiles.com/packages/lf20_eusamc.json	      ', 1),
+(3, 'Courier', 'Courier send', '	      https://assets3.lottiefiles.com/packages/lf20_1nfsbmja.json', 1),
+(4, 'Fireworks', 'Fireworks lottie', 'https://assets3.lottiefiles.com/packages/lf20_n9juuqmm.json	      ', 1),
+(5, 'Sparks', 'Sparks lottie', 'https://assets3.lottiefiles.com/packages/lf20_qgclz5o0.json	      ', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +79,14 @@ CREATE TABLE `tb_gallery` (
   `alt_gallery` varchar(80) DEFAULT NULL,
   `flag_active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=active || 0=not active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_gallery`
+--
+
+INSERT INTO `tb_gallery` (`id_gallery`, `img_gallery`, `alt_gallery`, `flag_active`) VALUES
+(2, 'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80', 'Tiger', 1),
+(3, 'https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80', 'Deer', 1);
 
 -- --------------------------------------------------------
 
@@ -76,6 +102,14 @@ CREATE TABLE `tb_member` (
   `member_password` varchar(80) DEFAULT NULL,
   `priv_type` tinyint(1) NOT NULL DEFAULT 0 COMMENT '1=Admin || 0=user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_member`
+--
+
+INSERT INTO `tb_member` (`id_member`, `first_name`, `last_name`, `email`, `member_password`, `priv_type`) VALUES
+(1, 'Andrew Virya', 'Victorio', 'andrew@gmail.com', '12345', 1),
+(2, 'Vincent George', 'Chandra', 'vincent@gmail.com', '12345', 1);
 
 -- --------------------------------------------------------
 
@@ -93,6 +127,13 @@ CREATE TABLE `tb_product` (
   `flag_active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=active || 0=not active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tb_product`
+--
+
+INSERT INTO `tb_product` (`id_product`, `product_name`, `product_desc`, `product_price`, `product_disc`, `product_img`, `flag_active`) VALUES
+(1, 'Dog Food', 'Enak', '999', '10', 'W_2013_199.jpg', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -105,6 +146,13 @@ CREATE TABLE `tb_service` (
   `img_service` varchar(80) DEFAULT NULL,
   `flag_active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=active || 0=not active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_service`
+--
+
+INSERT INTO `tb_service` (`id_service`, `title_service`, `img_service`, `flag_active`) VALUES
+(1, 'Pet Grooming', 'default.png', 1);
 
 -- --------------------------------------------------------
 
@@ -120,6 +168,13 @@ CREATE TABLE `tb_video` (
   `file_image` varchar(80) DEFAULT NULL,
   `flag_active` tinyint(1) DEFAULT 1 COMMENT '1=active || 0=not active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_video`
+--
+
+INSERT INTO `tb_video` (`id_video`, `title_video`, `desc_video`, `file_video`, `file_image`, `flag_active`) VALUES
+(1, 'Rick Roll', 'Rick Morty Video', 'Rick Astley - Never Gonna Give You Up (Official Music Video).mp4', 'pexels-pixabay-60597.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -176,43 +231,43 @@ ALTER TABLE `tb_video`
 -- AUTO_INCREMENT for table `tb_aboutus`
 --
 ALTER TABLE `tb_aboutus`
-  MODIFY `id_aboutus` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_aboutus` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_coreval`
 --
 ALTER TABLE `tb_coreval`
-  MODIFY `id_coreval` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_coreval` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `id_gallery` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_gallery` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_member`
 --
 ALTER TABLE `tb_member`
-  MODIFY `id_member` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_member` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `id_product` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_product` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_service`
 --
 ALTER TABLE `tb_service`
-  MODIFY `id_service` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_service` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_video`
 --
 ALTER TABLE `tb_video`
-  MODIFY `id_video` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_video` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
