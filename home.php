@@ -121,51 +121,49 @@
                 </p>
             </div>
             <div class="row">
-                <div class="value-playful d-flex justify-content-start flex-wrap">
-                    <div>
-                        <?php
-                        $sSQL = "SELECT * FROM tb_coreval";
-                        $result = mysqli_query($conn, $sSQL);
 
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                                <lottie-player src=<?= $row["src_coreval"]; ?>background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                    <div class="col-md-3 align-self-center ms-6">
-                        <?php
-                        $sSQL = "SELECT * FROM tb_coreval";
-                        $result = mysqli_query($conn, $sSQL);
+                <?php
+                $sSQL = "SELECT * FROM tb_coreval";
+                $result = mysqli_query($conn, $sSQL);
+                $i = 0;
 
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                                <h3 class="value-title">
-                                    <?= $row["title_coreval"] ?>
-                                </h3>
-                                <p class="value-desc">
-                                    <?= $row["desc_coreval"] ?>
-                                </p>
+                if (mysqli_num_rows($result) > 0) :
+                    while ($row = mysqli_fetch_assoc($result)) :
+                        $i++;
+                        if ($row['flag_active'] != 0) : // Check if active, delete this (and the first endif below) if flag active is not used
+                            $title = $row['title_coreval'];
+                            $src = $row['src_coreval'];
+                            $desc = $row['desc_coreval'];
+                ?>
+                            <?php if ($i % 2 === 1) : ?>
+                                <div class="value-playful d-flex justify-content-start flex-wrap">
+                                <?php else : ?>
+                                    <div class="value-playful d-flex justify-content-end flex-wrap">
+                                    <?php endif ?>
+                                    <div>
+                                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                        <?php echo '<lottie-player src="' . $src . '" background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player>' ?>
+                                    </div>
+                                    <div class="col-md-3 align-self-center ms-6">
+                                        <h3 class="value-title"><?php echo $title ?></h3>
+                                        <p class="value-desc"><?php echo $desc ?></p>
+                                    </div>
+                                    </div>
                         <?php
-                            }
-                        }
+                        endif;
+                    endwhile;
+                endif;
                         ?>
-                    </div>
-                </div>
-            </div>
-            <div class="button d-flex justify-content-center">
-                <button type="button" class="btn rounded-pill btn-lg my-5 btn-master">
-                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                    <lord-icon src="https://cdn.lordicon.com/cnyeuzxc.json" trigger="loop" style="width:32px;height:32px">
-                    </lord-icon>
-                    Reserve Now
-                </button>
-            </div>
+
+                                </div>
+                                <div class="button d-flex justify-content-center">
+                                    <button type="button" class="btn rounded-pill btn-lg my-5 btn-master">
+                                        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+                                        <lord-icon src="https://cdn.lordicon.com/cnyeuzxc.json" trigger="loop" style="width:32px;height:32px">
+                                        </lord-icon>
+                                        Reserve Now
+                                    </button>
+                                </div>
         </section>
         <!-- END Value Section -->
 
