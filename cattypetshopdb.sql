@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 02:14 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: Jun 16, 2022 at 03:43 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,10 +40,7 @@ CREATE TABLE `tb_aboutus` (
 --
 
 INSERT INTO `tb_aboutus` (`id_aboutus`, `title_aboutus`, `desc_aboutus`, `img_aboutus`, `flag_active`) VALUES
-(1, 'We are #1', 'Provided top service', 'award.jpg', 0),
-(2, '85+', 'Award', 'award.jpg', 1),
-(3, '99K', 'Clients', 'clients.jpg', 1),
-(4, '99%', 'Protection', 'protection.jpg', 1);
+(1, 'We are #1', 'Provided top service', 'download.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -135,9 +132,7 @@ CREATE TABLE `tb_product` (
 --
 
 INSERT INTO `tb_product` (`id_product`, `product_name`, `product_desc`, `product_price`, `product_disc`, `product_img`, `flag_active`) VALUES
-(1, 'Dog Food', 'Enak', '$10', '75%', 'dental-treats.jpg', 1),
-(2, 'Brand', 'Brand2', '$20', '50%', 'wet-food.jpg', 1),
-(3, 'Brand 3', 'Core', '$20', '20%', 'dry-food.jpg', 1);
+(1, 'Dog Food', 'Enak', '999', '10', 'W_2013_199.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -157,9 +152,7 @@ CREATE TABLE `tb_service` (
 --
 
 INSERT INTO `tb_service` (`id_service`, `title_service`, `img_service`, `flag_active`) VALUES
-(1, 'Pet Grooming', 'images1.png', 1),
-(2, 'Pet Clinic', 'image2.png', 1),
-(3, 'Pet Sitter', 'image3.png', 1);
+(1, 'Pet Grooming', 'default.png', 1);
 
 -- --------------------------------------------------------
 
@@ -238,7 +231,7 @@ ALTER TABLE `tb_video`
 -- AUTO_INCREMENT for table `tb_aboutus`
 --
 ALTER TABLE `tb_aboutus`
-  MODIFY `id_aboutus` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_aboutus` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_coreval`
@@ -256,19 +249,19 @@ ALTER TABLE `tb_gallery`
 -- AUTO_INCREMENT for table `tb_member`
 --
 ALTER TABLE `tb_member`
-  MODIFY `id_member` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_member` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_product`
 --
 ALTER TABLE `tb_product`
-  MODIFY `id_product` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_product` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_service`
 --
 ALTER TABLE `tb_service`
-  MODIFY `id_service` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_service` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_video`
