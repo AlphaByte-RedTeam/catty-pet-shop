@@ -69,8 +69,8 @@
                             </li>
                         </ul>
                         <div class="d-flex flex-wrap rounded">
-                            <a href="#" class="btn btn-master">
-                                Register
+                            <a href="./cms/index.php" class="btn btn-master">
+                                Login
                             </a>
                         </div>
                     </div>
